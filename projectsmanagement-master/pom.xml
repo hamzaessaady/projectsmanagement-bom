@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>isi.essaady.projectsmanagement</groupId>
+        <artifactId>projectsmanagement-bom</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    
+    <artifactId>projectsmanagement-master</artifactId>
+    <packaging>pom</packaging>
+
+    <name>ProjectsManagement-MASTER</name>
+    
+    <modules>
+        <module>projectsmanagement-jpa</module>
+        <module>projectsmanagement-ejb</module>
+        <module>projectsmanagement-web</module>
+        <module>projectsmanagement-application</module>
+    </modules>
+
+    <properties>
+        <!-- maven default properties -->
+        <encoding>UTF-8</encoding>
+        <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
+        <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <ejb.ejbVersion>3.2</ejb.ejbVersion>
+        <ejb.generateClient>true</ejb.generateClient>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        <maven.ear.duplicateArtifactsBreakTheBuild>true</maven.ear.duplicateArtifactsBreakTheBuild>
+        <skipITs>true</skipITs>
+        
+        <!-- dependency versions -->
+        <javaee.version>7.0</javaee.version>
+        <junit.version>4.11</junit.version>
+        
+        <!-- plugin versions -->
+        <maven-failsafe-plugin.version>2.17</maven-failsafe-plugin.version>
+        <maven-source-plugin.version>2.4</maven-source-plugin.version>
+        <maven-ear-plugin.version>2.10</maven-ear-plugin.version>
+        <maven-ejb-plugin.version>2.3</maven-ejb-plugin.version>
+        <build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
+    </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>${javaee.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-ejb-plugin</artifactId>
+                    <version>${maven-ejb-plugin.version}</version>
+                    <configuration>
+                        <clientExcludes>
+                            <clientExclude>**/*Service.class</clientExclude>
+                        </clientExcludes>
+                    </configuration>
+                </plugin>
+                
+                <plugin>
+                    <artifactId>maven-ear-plugin</artifactId>
+                    <version>${maven-ear-plugin.version}</version>
+                    <configuration>
+                        <fileNameMapping>no-version</fileNameMapping>
+                        <version>7</version>
+                        <defaultLibBundleDir>lib</defaultLibBundleDir>
+                        <libraryDirectoryMode>NONE</libraryDirectoryMode>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    
+</project>

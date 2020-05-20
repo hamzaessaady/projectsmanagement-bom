@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>isi.essaady.projectsmanagement</groupId>
+    <artifactId>projectsmanagement-bom</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    
+    <name>ProjectsManagement-BOM</name>
+    
+    <developers>
+    	<developer>
+    		<name>ES-SAADY Hamza</name>
+    		<email>es.saady.hamza@gmail.com</email>
+    	</developer>
+    </developers>
+    
+    <properties>
+    	<project.gid>isi.essaady.projectsmanagement</project.gid>
+        <project.version>1.0-SNAPSHOT</project.version>
+    </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.gid}</groupId>
+                <artifactId>projectsmanagement-jpa</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>${project.gid}</groupId>
+                <artifactId>projectsmanagement-ejb</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.gid}</groupId>
+                <artifactId>projectsmanagement-ejb</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            
+            <dependency>
+                <groupId>${project.gid}</groupId>
+                <artifactId>projectsmanagement-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.gid}</groupId>
+                <artifactId>projectsmanagement-web</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    
+    <modules>
+    	<module>projectsmanagement-master</module>
+    </modules>
+</project>
