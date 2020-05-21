@@ -1,0 +1,3 @@
+[submodule "projectsmanagement-master/projectsmanagement-ejb"]
+	path = projectsmanagement-master/projectsmanagement-ejb
+	url = https://github.com/Kuohamkun/projectsmanagement-ejb.git
