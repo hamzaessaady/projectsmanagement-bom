@@ -7,3 +7,6 @@
 [submodule "projectsmanagement-master/projectsmanagement-web"]
 	path = projectsmanagement-master/projectsmanagement-web
 	url = https://github.com/Kuohamkun/projectsmanagement-web.git
+[submodule "projectsmanagement-master/projectsmanagement-application"]
+	path = projectsmanagement-master/projectsmanagement-application
+	url = https://github.com/Kuohamkun/projectsmanagement-application.git
