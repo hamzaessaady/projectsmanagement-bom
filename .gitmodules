@@ -1,3 +1,6 @@
 [submodule "projectsmanagement-master/projectsmanagement-ejb"]
 	path = projectsmanagement-master/projectsmanagement-ejb
 	url = https://github.com/Kuohamkun/projectsmanagement-ejb.git
+[submodule "projectsmanagement-master/projectsmanagement-jpa"]
+	path = projectsmanagement-master/projectsmanagement-jpa
+	url = https://github.com/Kuohamkun/projectsmanagement-jpa.git
