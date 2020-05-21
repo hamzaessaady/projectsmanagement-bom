@@ -4,3 +4,6 @@
 [submodule "projectsmanagement-master/projectsmanagement-jpa"]
 	path = projectsmanagement-master/projectsmanagement-jpa
 	url = https://github.com/Kuohamkun/projectsmanagement-jpa.git
+[submodule "projectsmanagement-master/projectsmanagement-web"]
+	path = projectsmanagement-master/projectsmanagement-web
+	url = https://github.com/Kuohamkun/projectsmanagement-web.git
