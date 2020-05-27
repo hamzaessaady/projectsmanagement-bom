@@ -1,16 +1,16 @@
 [submodule "projectsmanagement-master/projectsmanagement-ejb"]
 	path = projectsmanagement-master/projectsmanagement-ejb
 	url = https://github.com/Kuohamkun/projectsmanagement-ejb.git
-	branch = feature/Login
+	branch = develop
 [submodule "projectsmanagement-master/projectsmanagement-jpa"]
 	path = projectsmanagement-master/projectsmanagement-jpa
 	url = https://github.com/Kuohamkun/projectsmanagement-jpa.git
-	branch = feature/Login
+	branch = develop
 [submodule "projectsmanagement-master/projectsmanagement-web"]
 	path = projectsmanagement-master/projectsmanagement-web
 	url = https://github.com/Kuohamkun/projectsmanagement-web.git
-	branch = feature/Login
+	branch = develop
 [submodule "projectsmanagement-master/projectsmanagement-application"]
 	path = projectsmanagement-master/projectsmanagement-application
 	url = https://github.com/Kuohamkun/projectsmanagement-application.git
-	branch = feature/Login
+	branch = develop
