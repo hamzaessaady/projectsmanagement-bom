@@ -43,7 +43,7 @@ Here is the relationship between these modules :
 ## Installation and configuration
 
 ### Database Schema
-Run this **[script](./projectsManagement_db)** to create the database. The admin credentials will be inserted also : 
+Run this **[script](./projectsManagement_db.sql)** to create the database. The admin credentials will be inserted also : 
 ```
   username: master
   password: 123456
